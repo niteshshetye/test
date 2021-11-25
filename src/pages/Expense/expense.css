@@ -1,0 +1,18 @@
+.expense-div{
+    width: 50%;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .expense-div{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .expense-div{
+        width: 90%;
+    }
+}

@@ -1,0 +1,36 @@
+.back-cancel{
+    /* width: 50%; */
+    margin: 30px auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.btn-back, .btn-cancel{
+    padding: 12px 20px;
+    font-size: 1rem;
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+Link i{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    
+    .btn-back, .btn-cancel{
+        font-size: .9rem;
+    }
+}
+

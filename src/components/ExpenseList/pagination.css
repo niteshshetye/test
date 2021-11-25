@@ -1,0 +1,34 @@
+.react-paginate{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+}
+.paginationBttns {
+    width: max-content;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  
+  .paginationBttns a {
+    padding: 10px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 1px solid #187cff;
+    color: #187cff;
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: #187cff;
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: #187cff;
+  }
