@@ -89,7 +89,7 @@ const UpdateExpense = () => {
             newestOnTop: true,
             hideProgressBar: false,
         });
-        // resetForm()
+        resetForm()
     }
     return (
         <>

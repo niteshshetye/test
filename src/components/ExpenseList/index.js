@@ -30,8 +30,8 @@ const ExpenseList = () => {
                 {
                     (query && searchList.length !== 0)? (
                         searchList.map(item => 
-                            <div key={item.id}>
-                                <Card key={item.id} item={item} />
+                            <div key={item._id}>
+                                <Card item={item} />
                             </div>
                         )
                     ): (query && searchList.length === 0)? (
@@ -40,8 +40,8 @@ const ExpenseList = () => {
                         </div>
                     ): (!query && expensList.length !== 0)? (
                         displayExpense.map(item => (
-                            <div key={item.id}>
-                                <Card key={item.id} item={item} />
+                            <div key={item._id}>
+                                <Card item={item} />
                             </div>
                         ))
                     ): (

@@ -20,7 +20,7 @@ export const expensesReducer = (state = initialState , action) => {
                 expensList: action.payload
             }
         case EXPENSE_DELETED:
-            const newExpenseList = state.expensList.filter(expense => expense.id !== action.payload)
+            const newExpenseList = state.expensList.filter(expense => expense._id !== action.payload)
             return {
                 ...state,
                 expensList: newExpenseList
@@ -43,7 +43,8 @@ export const expensesReducer = (state = initialState , action) => {
                 }
             }
         case UPDATE_EXPENSE:
-            const updateExpense = state.expensList.filter(expense => expense.id === action.payload)
+            const updateExpense = state.expensList.filter(expense => expense._id === action.payload)
+            console.log('update expense', updateExpense)
             return {
                 ...state,
                 updateExpense: {...updateExpense[0]}

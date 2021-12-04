@@ -1,10 +1,13 @@
+import { getUserId } from '../../services/accessUserId'
 import * as actionTypes from '../actionTypes'
 
 
 // *************************************************
 export const addExpense = (data) => {
+    const userId = getUserId()
     const createdAt= Date.now()
-    const newData = {...data, createdAt, id: createdAt  }
+    const newData = {createdAt, userId,...data }
+    console.log("data: ", newData)
     return {
         type: actionTypes.ADD_EXPENSE,
         payload: newData

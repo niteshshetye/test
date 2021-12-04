@@ -10,7 +10,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Card = ({item}) => {
-    const {amount, category:cate, createdAt, title, id} = item
+    const {amount, category:cate, createdAt, title, _id} = item
     const category = JSON.parse(cate)
     const time = moment(createdAt).fromNow()
     const dispatch = useDispatch()
@@ -34,14 +34,14 @@ const Card = ({item}) => {
 
     const handleDelete = (id) => {
         if(login){
+            dispatch(deleteExpense(id))
+            dispatch(loadExpense())
             toast.success('Expenses Deleted...!', {
                 position: 'top-right',
                 autoClose: 1500,
                 newestOnTop: true,
                 hideProgressBar: false,
             });
-            dispatch(deleteExpense(id))
-            dispatch(loadExpense())
         }else{
             toast.error('Please Login', {
                 position: 'top-right',
@@ -66,8 +66,8 @@ const Card = ({item}) => {
                 </div>
                 <div className='card-opration'>
                     <label className='card-label'>₹ {amount}</label>
-                    <button className='btn-edit' onClick={() => handleUpdate(id)}><i className="fi fi-rr-edit"></i></button>
-                    <button className='btn-delete' onClick={() => handleDelete(id)}><i className="fi fi-rr-trash"></i></button>
+                    <button className='btn-edit' onClick={() => handleUpdate(_id)}><i className="fi fi-rr-edit"></i></button>
+                    <button className='btn-delete' onClick={() => handleDelete(_id)}><i className="fi fi-rr-trash"></i></button>
                 </div>
             </div>
         </>

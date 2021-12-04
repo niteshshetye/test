@@ -74,6 +74,7 @@ const FormExpense = () => {
     
     const dispatch = useDispatch()
     const onSubmit = (values, {resetForm}) => {
+        // console.log(values)
         dispatch(addExpense(values))
         toast.success('Expenses Added...!', {
             position: 'top-right',
